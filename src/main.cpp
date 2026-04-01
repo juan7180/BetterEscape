@@ -4,6 +4,7 @@
 
 using namespace geode::prelude;
 
+#ifdef GEODE_IS_DESKTOP
 class $modify(BetterEscapePauseLayer, PauseLayer) {
 	void keyDown(cocos2d::enumKeyCodes key, double timestamp) {
 		if (key == cocos2d::enumKeyCodes::KEY_Escape) {
@@ -23,3 +24,4 @@ class $modify(BetterEscapePauseLayer, PauseLayer) {
 		this->onResume(nullptr);
 	}
 };
+#endif
